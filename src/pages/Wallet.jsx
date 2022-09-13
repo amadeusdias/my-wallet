@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { fetchCoins } from '../redux/actions/coinsAction';
 import Header from '../components/Header';
 import WalletForm from '../components/WalletForm';
+import Table from '../components/Table';
 
 class Wallet extends React.Component {
   constructor() {
@@ -21,6 +22,7 @@ class Wallet extends React.Component {
       <div>
         <Header />
         <WalletForm />
+        <Table />
       </div>
     );
   }
