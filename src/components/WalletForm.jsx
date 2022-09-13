@@ -90,7 +90,6 @@ class WalletForm extends Component {
             form="walletForm"
           >
             {' '}
-            {console.log(currenciesArr)}
             {currenciesArr.map((coin) => (
 
               <option key={ coin }>{coin}</option>
