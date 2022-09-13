@@ -30,9 +30,13 @@ Wallet.propTypes = {
   fecht: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (dispacth) => ({
+const mapDispatchToProps = (dispacth) => ({
   fecht: () => dispacth(fetchCoins()),
 
 });
 
-export default connect(null, mapStateToProps)(Wallet);
+// const mapStateToProps = (state) => ({
+//   currencie: state.wallet.currency,
+// });
+
+export default connect(null, mapDispatchToProps)(Wallet);
