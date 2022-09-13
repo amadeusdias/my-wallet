@@ -32,14 +32,14 @@ export const fetchCoins = () => async (dispatch) => {
   }
 };
 
-export const fetchCurr = () => async (dispatch) => {
-  dispatch(requestCoins());
+// export const fetchCurr = () => async (dispatch) => {
+//   dispatch(requestCoins());
 
-  try {
-    const coins = await fetchCurrencies();
-    if (!coins) throw new Error('Não foi possivel fazer a requisição');
-    dispatch(saveCurrencies(coins));
-  } catch (error) {
-    dispatch(failedRequest(error.message));
-  }
-};
+//   try {
+//     const coins = await fetchCurrencies();
+//     if (!coins) throw new Error('Não foi possivel fazer a requisição');
+//     dispatch(saveCurrencies(coins));
+//   } catch (error) {
+//     dispatch(failedRequest(error.message));
+//   }
+// };
