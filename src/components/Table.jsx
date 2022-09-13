@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { deleteExpanse } from '../redux/actions/coinsAction';
 
 class Table extends Component {
   render() {
-    const { expenses } = this.props;
+    const { expenses, dispatch } = this.props;
     const arredondar = (n) => (Math.round(n * 100) / 100).toFixed(2);
     return (
       <div>
@@ -39,6 +40,17 @@ class Table extends Component {
 
                 </td>
                 <td>Real</td>
+                <td>
+                  <button
+                    type="button"
+                    data-testid="delete-btn"
+                    name="delete"
+                    onClick={ () => dispatch(deleteExpanse(Number(gastos.id))) }
+                  >
+                    Delete
+
+                  </button>
+                </td>
 
               </tr>
             )) }
@@ -51,6 +63,7 @@ class Table extends Component {
 
 Table.propTypes = {
   expenses: PropTypes.arrayOf(PropTypes.shape).isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
