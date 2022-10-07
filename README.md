@@ -1,4 +1,9 @@
-# 🚧 README em construção 🚧
+# Wallet Project
+Projeto realizado utilizando React, React Router e Redux, consumindo a API de Cotações de moedas da AwesomeAPI.
+
+O projeto consiste em uma Carteira que registra gastos de acordo com a moeda, realiza a conversão e cria uma tabela com seus gastos, com diversas TAGs de identificação. 
+
+> Em breve o projeto vai receber CSS e será realizado o deploy.
 
 <!-- Olá, Tryber!
 
