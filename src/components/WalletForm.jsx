@@ -26,7 +26,6 @@ class WalletForm extends Component {
       exchangeRates: data,
     });
     dispatch(saveCurrencies(this.state));
-    console.log('hello');
     this.nState();
   };
 
